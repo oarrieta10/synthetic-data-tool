@@ -1,0 +1,11 @@
+# The frozen sample client committed in power-bi-tool/tests/fixtures/sample_client.
+# Covers what those tests need: Dec 25 and Jan 1 closures (7-day e-com), store full-case lines,
+# and the default planted defects (zero/negative quantities, SKU spelling variants, ...).
+# Changing this profile does not change power-bi-tool until the fixture is regenerated and copied.
+name: test_fixture
+seed: 20261020
+start_date: "2024-12-15"
+days: 120
+n_skus: 400
+ecom_orders_per_day: 80
+b2b_orders_per_day: 4

@@ -1,0 +1,24 @@
+[project]
+name = "synthetic-data-tool"
+version = "0.1.0"
+description = "Synthetic warehouse clients (item master, orders, receipts, inventory) with an answer key"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pandas>=2.1", "pyyaml>=6", "duckdb>=1.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+app = ["streamlit>=1.40"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"synthtool" = ["*.html"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
